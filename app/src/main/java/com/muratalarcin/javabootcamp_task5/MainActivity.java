@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         binding.button9.setOnClickListener(view -> sayiEkleme("9"));
         binding.buttonToplama.setOnClickListener(view -> sayiEkleme(" + "));
         binding.buttonEsittir.setOnClickListener(view -> hesaplaSonuc());
+        binding.buttonTemizle.setOnClickListener(view -> temizle());
 
     }
     private void sayiEkleme(String sayi) {
@@ -47,5 +48,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         binding.textViewSonuc.setText(String.valueOf(toplam));
+    }
+
+    private void temizle() {
+        sonuc.delete(0, sonuc.length());
+        binding.textViewSonuc.setText("0");
     }
 }
