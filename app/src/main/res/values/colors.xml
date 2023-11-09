@@ -7,4 +7,7 @@
     <color name="backroundColor1">#00BCD7</color>
     <color name="backroundColor2">#EBF0F5</color>
     <color name="otherTextColor">#A6DFDF</color>
+
+    <color name="pressedStrokeColor">#F4511E</color>
+
 </resources>

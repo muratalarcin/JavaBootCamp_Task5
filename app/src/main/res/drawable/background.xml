@@ -1,16 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="8dp" />
-    <solid android:color="@color/backroundColor2" />
-    <stroke
-        android:width="2dp"
-        android:color="@color/otherTextColor" />
-    <padding
-        android:bottom="10dp"
-        android:top="10dp" />
-    <gradient
-        android:angle="45"
-        android:endColor="#5E35B1"
-        android:startColor="#F4511E"
-        android:type="linear" />
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Basıldığında -->
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="8dp" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/pressedStrokeColor" />
+            <padding
+                android:bottom="10dp"
+                android:top="10dp" />
+            <gradient
+                android:angle="45"
+                android:endColor="#5E35B1"
+                android:startColor="#F4511E"
+                android:type="linear" />
+        </shape>
+    </item>
+    <!-- Normal durumda -->
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="8dp" />
+            <solid android:color="@color/backroundColor2" />
+            <stroke
+                android:width="2dp"
+                android:color="@color/otherTextColor" />
+            <padding
+                android:bottom="10dp"
+                android:top="10dp" />
+            <gradient
+                android:angle="45"
+                android:endColor="#5E35B1"
+                android:startColor="#F4511E"
+                android:type="linear" />
+        </shape>
+    </item>
+</selector>
