@@ -2,6 +2,8 @@ package com.muratalarcin.javabootcamp_task5;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.muratalarcin.javabootcamp_task5.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,15 +34,13 @@ public class MainActivity extends AppCompatActivity {
     }
     private void sayiEkleme(String sayi) {
         if (sayi.equals(" + ") && sonuc.toString().isEmpty()) {
+            Snackbar.make(binding.textViewSonucIslem, "İşleme ' + ' Operatörüyle Başlayamazsınız!!'", Snackbar.LENGTH_SHORT).show();
             return;
         }
         sonuc.append(sayi);
         binding.textViewSonuc.setText(sonuc.toString());
     }
     private void hesaplaSonuc() {
-        if (!sonuc.toString().isEmpty() && sonuc.toString().startsWith("+")) {
-            sonuc.delete(0, 1);
-        }
         String[] parcalar = sonuc.toString().split(" \\+ ");
         int toplam = 0;
 
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
             toplam += Integer.parseInt(parca.trim());
         }
 
+        binding.textViewSonucIslem.setText(sonuc.toString());
         sonuc = new StringBuilder(String.valueOf(toplam));
         binding.textViewSonuc.setText(sonuc.toString());
     }

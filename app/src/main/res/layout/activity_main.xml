@@ -7,7 +7,6 @@
     android:background="@drawable/app_backround"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
@@ -251,8 +250,8 @@
         android:id="@+id/textViewSonuc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:layout_marginRight="12dp"
+        android:layout_marginBottom="4dp"
         android:gravity="end"
         android:padding="8dp"
         android:text="0"
@@ -261,6 +260,21 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewSonucIslem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:gravity="end"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="@color/otherTextColor"
+        android:textSize="45dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSonuc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
