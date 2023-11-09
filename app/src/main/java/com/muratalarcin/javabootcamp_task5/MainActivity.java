@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
             toplam += Integer.parseInt(parca.trim());
         }
 
-        binding.textViewSonuc.setText(String.valueOf(toplam));
+        sonuc = new StringBuilder(String.valueOf(toplam));
+        binding.textViewSonuc.setText(sonuc.toString());
     }
-
     private void temizle() {
         sonuc.delete(0, sonuc.length());
         binding.textViewSonuc.setText("0");
