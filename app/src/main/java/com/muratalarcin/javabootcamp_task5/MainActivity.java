@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         binding.textViewSonucIslem.setText(sonuc.toString());
         sonuc = new StringBuilder(String.valueOf(toplam));
         binding.textViewSonuc.setText(sonuc.toString());
+        binding.textViewSonucIslem.setText("");
     }
     private void temizle() {
         sonuc.delete(0, sonuc.length());
