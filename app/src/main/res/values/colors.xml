@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="customButtonColor">#4DB6AC</color>
+    <color name="backroundColor1">#00BCD7</color>
+    <color name="backroundColor2">#EBF0F5</color>
+    <color name="otherTextColor">#A6DFDF</color>
 </resources>

@@ -4,12 +4,16 @@ plugins {
 
 android {
     namespace = "com.muratalarcin.javabootcamp_task5"
-    compileSdk = 33
+    compileSdk = 34
+
+    buildFeatures {
+        viewBinding = true;
+    }
 
     defaultConfig {
         applicationId = "com.muratalarcin.javabootcamp_task5"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
