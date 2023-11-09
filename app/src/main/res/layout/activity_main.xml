@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/otherButton7"
+            android:id="@+id/button7"
             android:layout_width="98dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="2dp"
@@ -80,7 +80,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/otherButton1"
+            android:id="@+id/button1"
             android:layout_width="98dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="2dp"
@@ -164,12 +164,11 @@
             tools:layout_editor_absoluteY="593dp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonVirgül"
+            android:id="@+id/otherButton3"
             android:layout_width="98dp"
             android:layout_height="match_parent"
             android:layout_marginRight="2dp"
             android:background="@drawable/background"
-            android:text=","
             android:textColor="@color/otherTextColor"
             android:textSize="28sp"
             tools:layout_editor_absoluteX="210dp"
@@ -200,7 +199,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/otherButton4"
+            android:id="@+id/button4"
             android:layout_width="98dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="2dp"
