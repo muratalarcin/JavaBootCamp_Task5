@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
         sonuc = new StringBuilder();
 
-
         binding.button0.setOnClickListener(view -> sayiEkleme("0"));
         binding.button1.setOnClickListener(view -> sayiEkleme("1"));
         binding.button2.setOnClickListener(view -> sayiEkleme("2"));
@@ -32,11 +31,21 @@ public class MainActivity extends AppCompatActivity {
         binding.button8.setOnClickListener(view -> sayiEkleme("8"));
         binding.button9.setOnClickListener(view -> sayiEkleme("9"));
         binding.buttonToplama.setOnClickListener(view -> sayiEkleme(" + "));
-
+        binding.buttonEsittir.setOnClickListener(view -> hesaplaSonuc());
 
     }
     private void sayiEkleme(String sayi) {
         sonuc.append(sayi);
         binding.textViewSonuc.setText(sonuc.toString());
+    }
+    private void hesaplaSonuc() {
+        String[] parcalar = sonuc.toString().split(" \\+ ");
+        int toplam = 0;
+
+        for (String parca : parcalar) {
+            toplam += Integer.parseInt(parca.trim());
+        }
+
+        binding.textViewSonuc.setText(String.valueOf(toplam));
     }
 }
