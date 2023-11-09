@@ -1,12 +1,7 @@
 package com.muratalarcin.javabootcamp_task5;
 
-import static android.service.controls.ControlsProviderService.TAG;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.util.Log;
-
 import com.muratalarcin.javabootcamp_task5.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,10 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void sayiEkleme(String sayi) {
+        if (sayi.equals(" + ") && sonuc.toString().isEmpty()) {
+            return;
+        }
         sonuc.append(sayi);
         binding.textViewSonuc.setText(sonuc.toString());
     }
     private void hesaplaSonuc() {
+        if (!sonuc.toString().isEmpty() && sonuc.toString().startsWith("+")) {
+            sonuc.delete(0, 1);
+        }
         String[] parcalar = sonuc.toString().split(" \\+ ");
         int toplam = 0;
 
